@@ -30,6 +30,7 @@ while ($needWords -eq $true) {
 $finalOutput = $finalwords -join $seperator
 
 $randomSymbol = Get-Random -InputObject $symbolList -Count 1
-$finalOutput = $finalOutput + $randomSymbol
+$randomNumber = Get-random -minimum 1 -maximum 10
+$finalOutput = "$randomNumber" + $seperator.ToString() + $finalOutput + $randomSymbol.ToString()
 
 Write-Host $finalOutput
